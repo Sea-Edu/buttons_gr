@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+* body .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 25px;
+}
+* body .buttons table {
+  margin: 10px;
+  padding: 5px;
+  border: 2px dotted #4CAF4F;
+}
+* body .buttons table tr .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #339537;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+* body .buttons table tr .btn_md {
+  padding: 14px 32px;
+  font-size: 16px;
+}
+* body .buttons table tr .btn_sm {
+  padding: 8px 24px;
+  font-size: 14px;
+}
+* body .buttons table tr .btn:focus {
+  border: 2px solid #4d4d4d;
+}
+* body .buttons table tr .btn:active {
+  background-color: #2d812f;
+}
+* body .buttons table tr .btn:disabled {
+  background-color: #f5f7fa;
+  color: #abbed1;
+  cursor: not-allowed;
+}
+* body .buttons table tr .btn svg {
+  color: #abbed1 !important;
+}
+* body .buttons table tr .btn .snipper {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  border-radius: 50%;
+  --webkit-mask: radial-gradient(farthest-side, #0000 40%, #ffffff 41%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, rgba(255, 255, 255, 0.5)), color-stop(0, rgb(255, 255, 255))) center/1.9px 100%, -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(0, rgba(255, 255, 255, 0.75))) center/100% 1.9px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 50%, rgb(255, 255, 255) 0) center/1.9px 100%, linear-gradient(90deg, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.75) 0) center/100% 1.9px;
+  background-repeat: no-repeat;
+  -webkit-animation: spinner-d3o0rx 1s infinite steps(12);
+          animation: spinner-d3o0rx 1s infinite steps(12);
+}
+* body .buttons table tr .btn .snipper::after, * body .buttons table tr .btn .snipper::before {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+* body .buttons table tr .btn .snipper::after {
+  opacity: 0.83;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+@-webkit-keyframes spinner-d3o0rx {
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+@keyframes spinner-d3o0rx {
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+* body .buttons table tr .btn_border {
+  border: 1px solid #4CAF4F;
+  color: #4CAF4F;
+  background-color: white;
+}
+* body .buttons table tr .btn_border .snipper {
+  background: conic-gradient(rgba(0, 0, 0, 0) 10%, #02e806) content-box;
+  --webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+    radial-gradient(farthest-side, #0000 calc(100% - 3.8px), #000 calc(100% - 3.8px));
+  --webkit-mask-composite: destination-in;
+}
+* body .buttons table tr .btn_border:focus {
+  border: 2px solid #89939E;
+  color: #4CAF4F;
+  background-color: #F5F7FA;
+}
+* body .buttons table tr .btn_border:active {
+  border: none;
+}
+* body .buttons table tr .btn_color {
+  color: #4CAF4F;
+  background-color: white;
+  border: none;
+}
+* body .buttons table tr .btn_color .snipper {
+  background: conic-gradient(rgba(6, 245, 1, 0) 10%, #02e806) content-box;
+  --webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+    radial-gradient(farthest-side, #0000 calc(100% - 3.8px), #000 calc(100% - 3.8px));
+  --webkit-mask-composite: destination-in;
+}
+* body .buttons table tr .btn_color:hover {
+  background-color: #F5F7FA;
+}
+* body .buttons table tr .btn_color:focus {
+  border: 2px solid #4D4D4D;
+}
+* body .buttons table tr .btn_color:active {
+  background-color: #E8F5E9;
+}/*# sourceMappingURL=style.css.map */

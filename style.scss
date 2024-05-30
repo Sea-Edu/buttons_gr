@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  body {
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+
+      table {
+        margin: 10px;
+        padding: 5px;
+        border: 2px dotted #4CAF4F;
+
+        tr {
+          .btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            color: white;
+            font-size: 18px;
+            font-weight: 400;
+            background-color: #339537;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            // margin-left: 15px;
+
+
+            
+            // Medium size
+            &_md {
+              padding: 14px 32px;
+              font-size: 16px;
+            }
+
+            // small size
+            &_sm {
+              padding: 8px 24px;
+              font-size: 14px;
+            }
+
+            // Focus situation
+            &:focus {
+              border: 2px solid #4d4d4d;
+            }
+
+            // Click
+            &:active {
+              background-color: #2d812f;
+            }
+
+            // disabled
+            &:disabled {
+              background-color: #f5f7fa;
+              color: #abbed1;
+              cursor: not-allowed;
+            }
+
+            svg {
+              color: #abbed1 !important;
+            }
+
+            // loading times
+            .snipper {
+              width: 20px;
+              height: 20px;
+              display: grid;
+              border-radius: 50%;
+              --webkit-mask: radial-gradient(farthest-side, #0000 40%, #ffffff 41%);
+              background: linear-gradient(0deg,
+                  rgba(255, 255, 255, 0.5) 50%,
+                  rgba(255, 255, 255, 1) 0) center/1.9px 100%,
+                linear-gradient(90deg,
+                  rgba(255, 255, 255, 0.25) 50%,
+                  rgba(255, 255, 255, 0.75) 0) center/100% 1.9px;
+              background-repeat: no-repeat;
+              animation: spinner-d3o0rx 1s infinite steps(12);
+
+              &::after,
+              &::before {
+                content: "";
+                grid-area: 1/1;
+                border-radius: 50%;
+                background: inherit;
+                opacity: 0.915;
+                transform: rotate(30deg);
+              }
+
+              &::after {
+                opacity: 0.83;
+                transform: rotate(60deg);
+              }
+
+              @keyframes spinner-d3o0rx {
+                100% {
+                  transform: rotate(1turn);
+                }
+              }
+            }
+
+            // changed border color
+            &_border {
+              border: 1px solid #4CAF4F;
+              color: #4CAF4F;
+              background-color: white;
+
+
+              .snipper {
+                background: conic-gradient(#0000 10%, #02e806) content-box;
+                --webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+                  radial-gradient(farthest-side, #0000 calc(100% - 3.8px), #000 calc(100% - 3.8px));
+                --webkit-mask-composite: destination-in;
+
+              }
+
+              &:focus {
+                border: 2px solid #89939E;
+                color: #4CAF4F;
+                background-color: #F5F7FA;
+              }
+
+              &:active {
+                border: none;
+              }
+            }
+
+            &_color {
+              color: #4CAF4F;
+              background-color: white;
+              border: none;
+
+
+              .snipper{
+                background: conic-gradient(#06f50100 10%, #02e806) content-box;
+                --webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+                  radial-gradient(farthest-side, #0000 calc(100% - 3.8px), #000 calc(100% - 3.8px));
+                --webkit-mask-composite: destination-in;
+              }
+              
+              &:hover {
+                background-color: #F5F7FA;
+              }
+
+              &:focus {
+                border: 2px solid #4D4D4D;
+              }
+
+              &:active {
+                background-color: #E8F5E9;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
